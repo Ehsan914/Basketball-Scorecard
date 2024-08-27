@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scorecard</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"><h1>Scoreboard</h1></div>
+        <div class="main-part">
+            <div class="left">
+                <div class="content">
+                    <p class="teamType">Home</p>
+                    <div class="box" id="home"><h1>0</h1></div>
+                </div>
+                <div class="scores">
+                    <button class="score score1H" onclick="add1H()"><p>+1</p></button>
+                    <button class="score score2H" onclick="add2H()"><p>+2</p></button>
+                    <button class="score score3H" onclick="add3H()"><p>+3</p></button>
+                    <button class="reset resetH" onclick="resetH()"><p>reset</p></button>
+                </div>
+                
+            </div>
+            <div class="right">
+                <div class="content">
+                    <p class="teamType">Away</p>
+                    <div class="box" id="away"><h1>0</h1></div>
+                </div>
+                <div class="scores">
+                    <button class="score score1A" onclick="add1A()"><p>+1</p></button>
+                    <button class="score score2A" onclick="add2A()"><p>+2</p></button>
+                    <button class="score score3A" onclick="add3A()"><p>+3</p></button>
+                    <button class="reset resetA" onclick="resetA()"><p>reset</p></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

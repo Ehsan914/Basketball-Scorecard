@@ -8,6 +8,9 @@ const as2 = document.querySelector(".score2A");
 const as3 = document.querySelector(".score3A");
 const rsH = document.querySelector(".resetH");
 const rsA = document.querySelector(".resetA");
+const sec = document.querySelector(".sec");
+const min = document.querySelector(".mint");
+
 
 let homeScore = 0, awayScore = 0;
 
@@ -112,3 +115,25 @@ function resetA() {
         rsA.classList.remove("playing");
     }, 100)
 }
+
+function timer() {
+
+    let second = 0, minute = 0;
+    
+    const clock = setInterval(function() {
+        second++;
+        if (second == 60) {
+            second %= 60;
+            minute++; 
+            min.innerHTML = `<h1>${minute}</h1>`;
+        }
+        if (minute == 12) {
+            min.innerHTML = `<h1>0</h1>`;    
+            sec.innerHTML = `<h1>0</h1>`;
+            clearInterval(clock);
+        }
+        sec.innerHTML = `<h1>${second}</h1>`;
+    }, 1000)
+}
+
+timer();

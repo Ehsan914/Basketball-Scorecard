@@ -47,13 +47,52 @@ body {
 
 .main-part {
     display: flex;
-    gap: 40em;
+    gap: 20em;
 }
 
 .left, .right {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer {
+    font-size: 30px;
+}
+
+.colon {
+    font-size: 40px;
+    color: #ffffff;
+    opacity: .7;
+}
+
+.mint, .sec {
+    width: 100px;
+    height: 100px;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        opacity: .7;
+        font-size: 50px;
+        color: #ffffff;
+    }
 }
 
 .box {
@@ -119,6 +158,10 @@ button {
 
     .wrapper {
         padding: 50px;
+    }
+
+    .middle {
+        display: none;
     }
 
     .main-part {
